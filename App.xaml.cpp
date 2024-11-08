@@ -37,7 +37,13 @@ namespace winrt::Luck::implementation
     /// <param name="e">Details about the launch request and process.</param>
     void App::OnLaunched([[maybe_unused]] LaunchActivatedEventArgs const& e)
     {
+        using namespace Microsoft::UI::Xaml;
         window = make<MainWindow>();
         window.Activate();
+
+        // 导航到 mainpage
+        winrt::Microsoft::UI::Xaml::Controls::Frame rootFrame = winrt::Microsoft::UI::Xaml::Controls::Frame();
+        window.Content(rootFrame);
+        rootFrame.Navigate(xaml_typename<MainPage>(), window);
     }
 }
