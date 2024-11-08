@@ -1,12 +1,12 @@
-#pragma once
+﻿#pragma once
 
-#include "MainWindow.g.h"
+#include "BlankPage.g.h"
 
 namespace winrt::Luck::implementation
 {
-    struct MainWindow : MainWindowT<MainWindow>
+    struct BlankPage : BlankPageT<BlankPage>
     {
-        MainWindow()
+        BlankPage() 
         {
             // Xaml objects should not call InitializeComponent during construction.
             // See https://github.com/microsoft/cppwinrt/tree/master/nuget#initializecomponent
@@ -15,13 +15,13 @@ namespace winrt::Luck::implementation
         int32_t MyProperty();
         void MyProperty(int32_t value);
 
-        void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void ClickHandler(Windows::Foundation::IInspectable const& sender, Windows::UI::Xaml::RoutedEventArgs const& args);
     };
 }
 
 namespace winrt::Luck::factory_implementation
 {
-    struct MainWindow : MainWindowT<MainWindow, implementation::MainWindow>
+    struct BlankPage : BlankPageT<BlankPage, implementation::BlankPage>
     {
     };
 }

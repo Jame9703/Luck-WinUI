@@ -26,4 +26,5 @@ namespace winrt::Luck::implementation
     {
         myButton().Content(box_value(L"Clicked"));
     }
+
 }

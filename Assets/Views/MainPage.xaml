@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="Luck.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Luck"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid>
+        <ScrollViewer x:Name="SelectNumberScrollViewer" Margin="630,215,-45,10">
+            <Grid x:Name="select">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+        </ScrollViewer>
+        <AppBarButton
+            Width="100"
+            Height="60"
+            Margin="110,680,0,0"
+            Background="#FFC0F2BC"
+            Click="Button_Click"
+            FontFamily="{StaticResource HarmonyOSSans}"
+            Icon="Play"
+            Label="开始" />
+        <TextBlock
+            x:Name="InputTextBox"
+            Width="299"
+            Height="120"
+            Margin="1135,72,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            x:FieldModifier="public"
+            FontFamily="Algerian"
+            FontSize="120"
+            Foreground="Yellow"
+            Text=""
+            TextAlignment="Center"
+            TextWrapping="Wrap" />
+        <AppBarButton
+            x:Name="ExitButton"
+            Width="100"
+            Height="60"
+            Margin="463,679,0,0"
+            Background="#FFF06002"
+            Click="ExitButton_Click"
+            FontFamily="{StaticResource HarmonyOSSans}"
+            Icon="Clear"
+            Label="退出" />
+        <AppBarButton
+            x:Name="RenewButton"
+            Width="100"
+            Height="60"
+            Margin="291,679,0,0"
+            Background="#FF02F0DF"
+            Click="RenewButton_Click"
+            FontFamily="{StaticResource HarmonyOSSans}"
+            Icon="Refresh"
+            Label="重置" />
+        <Button
+            x:Name="SettingsButton"
+            Margin="110,805,0,0"
+            VerticalAlignment="Top"
+            Click="SettingsButton_Click"
+            Content="设置" />
+    </Grid>
+</Page>
