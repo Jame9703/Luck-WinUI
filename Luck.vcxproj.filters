@@ -23,13 +23,19 @@
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
     <ClCompile Include="Luck-Class\Luck.cpp">
-      <Filter>Luck-Class</Filter>
+      <Filter>Assets\Classes\Luck-Class</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets\Classes\RippleHelper\RippleHelper.cpp">
+      <Filter>Assets\Classes\RippleHelper</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Luck-Class\Luck.h">
-      <Filter>Luck-Class</Filter>
+      <Filter>Assets\Classes\Luck-Class</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets\Classes\RippleHelper\RippleHelper.h">
+      <Filter>Assets\Classes\RippleHelper</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -68,8 +74,11 @@
     <Filter Include="Assets\Classes">
       <UniqueIdentifier>{8905a6ef-f97c-43e6-ba63-29193505f358}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Luck-Class">
+    <Filter Include="Assets\Classes\Luck-Class">
       <UniqueIdentifier>{726ed554-a664-481d-8a22-e8c994955849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Classes\RippleHelper">
+      <UniqueIdentifier>{6500a419-3c0e-4e42-bd2e-5e8603432ddd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

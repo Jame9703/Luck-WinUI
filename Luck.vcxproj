@@ -107,6 +107,7 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assets\Classes\RippleHelper\RippleHelper.h" />
     <ClInclude Include="Assets\Views\MainPage.xaml.h">
       <DependentUpon>Assets\Views\MainPage.xaml</DependentUpon>
     </ClInclude>
@@ -125,6 +126,7 @@
     <Page Include="Assets\Views\MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Assets\Classes\RippleHelper\RippleHelper.cpp" />
     <ClCompile Include="Assets\Views\MainPage.xaml.cpp">
       <DependentUpon>Assets\Views\MainPage.xaml</DependentUpon>
     </ClCompile>
