@@ -26,4 +26,21 @@ namespace winrt::Luck::implementation
     {
         //myButton().Content(box_value(L"Clicked"));
     }
+    void MainPage::Button_Click(IInspectable const& sender, RoutedEventArgs const& args)
+    {
+
+    }
+    void MainPage::ExitButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+    {
+
+    }
+    void MainPage::RenewButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+    {
+
+    }
+    void MainPage::SettingsButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
+    {
+
+    }
 }
+
