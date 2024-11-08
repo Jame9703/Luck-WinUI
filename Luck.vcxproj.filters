@@ -4,11 +4,12 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="MainWindow.xaml" />
-    <Page Include="MainPage.xaml" />
+    <Page Include="Assets\Views\MainPage.xaml" />
+    <Page Include="Assets\Views\MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="MainWindow.idl" />
+    <Midl Include="Assets\Views\MainPage.idl" />
+    <Midl Include="Assets\Views\MainWindow.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -43,6 +44,15 @@
   <ItemGroup>
     <Filter Include="Assets">
       <UniqueIdentifier>{8f67d7f2-94c3-405c-a6fd-6972babdb078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Views">
+      <UniqueIdentifier>{6f93826d-ab2a-46b2-9498-a63d699e0031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Fonts">
+      <UniqueIdentifier>{8c2a3016-8250-4d52-bd88-d68f77026901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Classes">
+      <UniqueIdentifier>{8905a6ef-f97c-43e6-ba63-29193505f358}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
