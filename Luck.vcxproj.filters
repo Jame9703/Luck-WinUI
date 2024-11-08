@@ -22,13 +22,13 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="Luck.cpp">
+    <ClCompile Include="Luck-Class\Luck.cpp">
       <Filter>Luck-Class</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Luck.h">
+    <ClInclude Include="Luck-Class\Luck.h">
       <Filter>Luck-Class</Filter>
     </ClInclude>
   </ItemGroup>

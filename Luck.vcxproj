@@ -113,7 +113,7 @@
     <ClInclude Include="Assets\Views\MainWindow.xaml.h">
       <DependentUpon>Assets\Views\MainWindow.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="Luck.h" />
+    <ClInclude Include="Luck-Class\Luck.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -131,7 +131,7 @@
     <ClCompile Include="Assets\Views\MainWindow.xaml.cpp">
       <DependentUpon>Assets\Views\MainWindow.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="Luck.cpp" />
+    <ClCompile Include="Luck-Class\Luck.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
