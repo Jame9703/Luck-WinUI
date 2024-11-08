@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ResultPage.idl
+/ResultPage.xaml
+/ResultPage.xaml.cpp
+/ResultPage.xaml.h
