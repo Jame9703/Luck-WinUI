@@ -1,9 +1,0 @@
-namespace Luck
-{
-    [default_interface]
-    runtimeclass ResultPage : Microsoft.UI.Xaml.Controls.Page
-    {
-        ResultPage();
-        Int32 MyProperty;
-    }
-}

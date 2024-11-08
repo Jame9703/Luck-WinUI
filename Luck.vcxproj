@@ -118,10 +118,6 @@
     <ClInclude Include="MainWindow.xaml.h">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="ResultPage.xaml.h">
-      <DependentUpon>ResultPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml" />
@@ -129,9 +125,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml" />
-    <Page Include="ResultPage.xaml">
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainPage.xaml.cpp">
@@ -148,10 +141,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </ClCompile>
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="ResultPage.xaml.cpp">
-      <DependentUpon>ResultPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="MainPage.idl">
@@ -161,10 +150,6 @@
     <Midl Include="MainWindow.idl">
       <SubType>Code</SubType>
       <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Midl>
-    <Midl Include="ResultPage.idl">
-      <DependentUpon>ResultPage.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Midl>
   </ItemGroup>
   <ItemGroup>
