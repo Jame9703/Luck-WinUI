@@ -107,6 +107,7 @@
     <Manifest Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assets\Classes\Luck-Class\Luck.h" />
     <ClInclude Include="Assets\Classes\RippleHelper\RippleHelper.h" />
     <ClInclude Include="Assets\Views\MainPage.xaml.h">
       <DependentUpon>Assets\Views\MainPage.xaml</DependentUpon>
@@ -114,7 +115,6 @@
     <ClInclude Include="Assets\Views\MainWindow.xaml.h">
       <DependentUpon>Assets\Views\MainWindow.xaml</DependentUpon>
     </ClInclude>
-    <ClInclude Include="Luck-Class\Luck.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="App.xaml.h">
       <DependentUpon>App.xaml</DependentUpon>
@@ -126,6 +126,7 @@
     <Page Include="Assets\Views\MainWindow.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Assets\Classes\Luck-Class\Luck.cpp" />
     <ClCompile Include="Assets\Classes\RippleHelper\RippleHelper.cpp" />
     <ClCompile Include="Assets\Views\MainPage.xaml.cpp">
       <DependentUpon>Assets\Views\MainPage.xaml</DependentUpon>
@@ -133,7 +134,6 @@
     <ClCompile Include="Assets\Views\MainWindow.xaml.cpp">
       <DependentUpon>Assets\Views\MainWindow.xaml</DependentUpon>
     </ClCompile>
-    <ClCompile Include="Luck-Class\Luck.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
