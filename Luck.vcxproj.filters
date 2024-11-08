@@ -22,9 +22,15 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
+    <ClCompile Include="Luck.cpp">
+      <Filter>Luck-Class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Luck.h">
+      <Filter>Luck-Class</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -61,6 +67,9 @@
     </Filter>
     <Filter Include="Assets\Classes">
       <UniqueIdentifier>{8905a6ef-f97c-43e6-ba63-29193505f358}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Luck-Class">
+      <UniqueIdentifier>{726ed554-a664-481d-8a22-e8c994955849}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
