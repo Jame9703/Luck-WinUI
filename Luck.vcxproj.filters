@@ -4,12 +4,20 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Assets\Views\MainPage.xaml" />
-    <Page Include="Assets\Views\MainWindow.xaml" />
+    <Page Include="Assets\Views\MainPage.xaml">
+      <Filter>Assets\Views</Filter>
+    </Page>
+    <Page Include="Assets\Views\MainWindow.xaml">
+      <Filter>Assets\Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Midl Include="Assets\Views\MainPage.idl" />
-    <Midl Include="Assets\Views\MainWindow.idl" />
+    <Midl Include="Assets\Views\MainPage.idl">
+      <Filter>Assets\Views</Filter>
+    </Midl>
+    <Midl Include="Assets\Views\MainWindow.idl">
+      <Filter>Assets\Views</Filter>
+    </Midl>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -70,5 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\Fonts\HarmonyOS_Sans_SC_Medium.ttf">
+      <Filter>Assets\Fonts</Filter>
+    </Font>
   </ItemGroup>
 </Project>

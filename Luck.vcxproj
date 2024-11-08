@@ -168,6 +168,9 @@
     <Midl Include="Assets\Views\MainPage.idl" />
     <Midl Include="Assets\Views\MainWindow.idl" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="Assets\Fonts\HarmonyOS_Sans_SC_Medium.ttf" />
+  </ItemGroup>
   <!--
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
     Explorer "Package and Publish" context menu entry to be enabled for this project even if
