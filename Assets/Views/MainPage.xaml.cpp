@@ -40,7 +40,7 @@ namespace winrt::Luck::implementation
         try
         {
             Window w_window = e.Parameter().try_as<Window>();
-            if (w_window) __debugbreak();
+            if (!w_window) __debugbreak();
             this_AppWindow = w_window.AppWindow();
         }
         catch (winrt::hresult_error const& ex)
@@ -110,7 +110,7 @@ namespace winrt::Luck::implementation
     void MainPage::RenewButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
     {
         using namespace Microsoft::UI::Windowing;
-        if (this_AppWindow.Presenter() == AppWindowPresenterKind::FullScreen)
+        if (this_AppWindow.Presenter().Kind() == AppWindowPresenterKind::FullScreen)
             this_AppWindow.SetPresenter(AppWindowPresenterKind::Default);
         else this_AppWindow.SetPresenter(AppWindowPresenterKind::FullScreen);
     }

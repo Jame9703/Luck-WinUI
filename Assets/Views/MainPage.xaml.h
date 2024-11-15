@@ -25,7 +25,7 @@ namespace winrt::Luck::implementation
     
     
     private:
-        winrt::Microsoft::UI::Windowing::AppWindow this_AppWindow;
+        winrt::Microsoft::UI::Windowing::AppWindow this_AppWindow = winrt::Microsoft::UI::Windowing::AppWindow(nullptr);
     };
 }
 
