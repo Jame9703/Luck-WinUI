@@ -17,6 +17,3 @@ public:
     static int JudgePrize();
     static void FillLuckyNumbers();
 };
-
-
-
