@@ -3,19 +3,12 @@
 #if __has_include("MainPage.g.cpp")
 #include "MainPage.g.cpp"
 #endif
-#include "Assets\Classes\RippleHelper\RippleHelper.h"
-#include "Assets\Classes\Luck-Class\Luck.h"
-#include <winrt/Windows.UI.Popups.h>
-#include <microsoft.ui.xaml.window.h>
-#include <windows.h>
-#include <winrt/Windows.UI.Core.h>
 
 using namespace winrt;
-using namespace Microsoft::UI::Xaml;
-using namespace Windows::UI::Popups;
-using namespace winrt::Microsoft::UI;
-using namespace winrt::Microsoft::UI::Windowing;
-using namespace Windows::UI::Core;
+using namespace Microsoft::UI;
+using namespace Xaml;
+using namespace Windowing;
+
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -49,7 +42,7 @@ namespace winrt::Luck::implementation
 			winrt::hstring message = ex.message();
 
 			__debugbreak();
-			MessageBox(NULL, L"严重错误，窗口处理失败。\n", L"Luck错误", MB_OK);
+			MessageBox(NULL, L"严重错误，窗口处理失败。\n", ERROR_TITLE, MB_OK);
 			abort();
 		}
 

@@ -5,6 +5,9 @@
 #include <hstring.h>
 
 #define ERROR_TITLE L"Luck错误"
+
+
+
 // Undefine GetCurrentTime macro to prevent
 // conflict with Storyboard::GetCurrentTime
 #undef GetCurrentTime
@@ -25,3 +28,7 @@
 #include <winrt/Microsoft.UI.Xaml.Shapes.h>
 #include <winrt/Microsoft.UI.Dispatching.h>
 #include <wil/cppwinrt_helpers.h>
+
+
+#include "Assets\Classes\RippleHelper\RippleHelper.h"
+#include "Assets\Classes\Luck-Class\Luck.h"
