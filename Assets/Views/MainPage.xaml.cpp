@@ -36,8 +36,7 @@ namespace winrt::Luck::implementation
     void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
     {
         using namespace winrt::Microsoft::UI::Xaml;
-
-        
+       
         try
         {
             Window w_window = e.Parameter().try_as<Window>();
