@@ -79,11 +79,23 @@ namespace winrt::Luck::implementation
 
 		switch (LuckSet::JudgePrize())
 		{
-		case 0: { dialogContent.Text(L"请选择你的幸运数字"); break; }
-		case 1: { dialogContent.Text(L"恭喜你抽到一等奖"); break; }
-		case 2: { dialogContent.Text(L"恭喜你抽到二等奖"); break; }
-		case 3: { dialogContent.Text(L"恭喜你抽到三等奖"); break; }
-		case -1: { dialogContent.Text(L"所有奖项均已抽完"); break; }
+		case 0: 
+			dialogContent.Text(L"请选择你的幸运数字");
+			break;
+		case 1: 
+			dialogContent.Text(L"恭喜你抽到一等奖"); 
+			break;
+		case 2: 
+			dialogContent.Text(L"恭喜你抽到二等奖"); 
+			break;
+		case 3:
+			dialogContent.Text(L"恭喜你抽到三等奖");
+			break;
+		case -1:
+			dialogContent.Text(L"所有奖项均已抽完"); 
+			break;
+		default:
+			break;
 		}
 		dialog.Content(dialogContent);
 		dialog.PrimaryButtonText(L"好的");
