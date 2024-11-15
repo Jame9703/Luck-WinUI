@@ -63,39 +63,39 @@ namespace winrt::Luck::implementation
     void MainPage::Button_Click(IInspectable const& sender, RoutedEventArgs const& args)
     {
         LuckSet::SelectedNumber = 1;
-        MessageDialog dialog(L"³é½±ÖĞ...");
+        MessageDialog dialog(L"æŠ½å¥–ä¸­...");
         switch (LuckSet::JudgePrize())
         {
-            case 0:
-            {
-                dialog.Content(L"ÇëÑ¡ÔñÄãµÄĞÒÔËÊı×Ö");
-                dialog.ShowAsync();
-            }
-            break;
-            case 1:
-            {
-                dialog.Content(L"¹§Ï²Äã³éµ½Ò»µÈ½±");
-                dialog.ShowAsync();
-            }
-            break;
-            case 2:
-            {
-                dialog.Content(L"¹§Ï²Äã³éµ½¶şµÈ½±");
-                dialog.ShowAsync();
-            }
-            break;
-            case 3:
-            {
-                dialog.Content(L"¹§Ï²Äã³éµ½ÈıµÈ½±");
-                dialog.ShowAsync();
-            }
-            break;
-            case -1:
-            {
-                dialog.Content(L"ËùÓĞ½±Ïî¾ùÒÑ³éÍê");
-                dialog.ShowAsync();
-            }
-            break;
+        case 0:
+        {
+            dialog.Content(L"è¯·é€‰æ‹©ä½ çš„å¹¸è¿æ•°å­—");
+            dialog.ShowAsync();
+        }
+        break;
+        case 1:
+        {
+            dialog.Content(L"æ­å–œä½ æŠ½åˆ°ä¸€ç­‰å¥–");
+            dialog.ShowAsync();
+        }
+        break;
+        case 2:
+        {
+            dialog.Content(L"æ­å–œä½ æŠ½åˆ°äºŒç­‰å¥–");
+            dialog.ShowAsync();
+        }
+        break;
+        case 3:
+        {
+            dialog.Content(L"æ­å–œä½ æŠ½åˆ°ä¸‰ç­‰å¥–");
+            dialog.ShowAsync();
+        }
+        break;
+        case -1:
+        {
+            dialog.Content(L"æ‰€æœ‰å¥–é¡¹å‡å·²æŠ½å®Œ");
+            dialog.ShowAsync();
+        }
+        break;
         }
         MessageDialog dialog1(L"");
         /*co_await*/ dialog1.ShowAsync();
@@ -124,4 +124,3 @@ namespace winrt::Luck::implementation
 
     }
 }
-

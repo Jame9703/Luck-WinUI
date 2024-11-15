@@ -4,7 +4,7 @@
 #include <restrictederrorinfo.h>
 #include <hstring.h>
 
-#define ERROR_TITLE "Luck错误"
+#define ERROR_TITLE L"Luck错误"
 // Undefine GetCurrentTime macro to prevent
 // conflict with Storyboard::GetCurrentTime
 #undef GetCurrentTime
