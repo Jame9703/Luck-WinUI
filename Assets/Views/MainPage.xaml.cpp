@@ -32,7 +32,7 @@ namespace winrt::Luck::implementation
         throw hresult_not_implemented();
     }
 
-    // 导航，获取窗口并储存在 this_AppWindow 中。
+    // 导航，获取窗口并储存�?this_AppWindow 中�?
     void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
     {
         using namespace winrt::Microsoft::UI::Xaml;
@@ -65,7 +65,7 @@ namespace winrt::Luck::implementation
     void MainPage::Button_Click(IInspectable const& sender, RoutedEventArgs const& args)
     {
         LuckSet::SelectedNumber = 1;
-        MessageDialog dialog(L"抽奖中...");
+        MessageDialog dialog(L"抽奖�?..");
         switch (LuckSet::JudgePrize())
         {
         case 0:
@@ -94,7 +94,7 @@ namespace winrt::Luck::implementation
         break;
         case -1:
         {
-            dialog.Content(L"所有奖项均已抽完");
+            dialog.Content(L"所有奖项均已抽�?);
             dialog.ShowAsync();
         }
         break;
