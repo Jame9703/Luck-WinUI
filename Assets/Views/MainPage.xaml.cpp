@@ -3,6 +3,7 @@
 #if __has_include("MainPage.g.cpp")
 #include "MainPage.g.cpp"
 #endif
+<<<<<<< HEAD
 #include "Assets\Classes\RippleHelper\RippleHelper.h"
 #include "Assets\Views\SettingsPage.xaml.h"
 #include "Assets\Classes\Luck-Class\Luck.h"
@@ -17,6 +18,14 @@ using namespace Microsoft::UI::Xaml;
 using namespace Windows::UI::Popups;
 using namespace winrt::Microsoft::UI;
 using namespace winrt::Microsoft::UI::Windowing;
+=======
+
+using namespace winrt;
+using namespace Microsoft::UI;
+using namespace Xaml;
+using namespace Windowing;
+
+>>>>>>> bbe4cc73fce5a07e201eefb486ef95f93fda3760
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -33,6 +42,7 @@ namespace winrt::Luck::implementation
 		throw hresult_not_implemented();
 	}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // ��������ȡ���ڲ������� this_AppWindow �С�
     void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
@@ -74,6 +84,26 @@ namespace winrt::Luck::implementation
 
 			__debugbreak();
 			MessageBox(NULL, L"严重错误，窗口处理失败。\n", L"Luck错误", MB_OK);
+=======
+	// 导航，获取窗口并储存�?this_AppWindow 中�?
+	void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
+	{
+		using namespace winrt::Microsoft::UI::Xaml;
+
+		try
+		{
+			Window w_window = e.Parameter().try_as<Window>();
+			if (!w_window) __debugbreak();
+			this_AppWindow = w_window.AppWindow();
+		}
+		catch (winrt::hresult_error const& ex)
+		{
+			winrt::hresult hr = ex.code();
+			winrt::hstring message = ex.message();
+
+			__debugbreak();
+			MessageBox(NULL, L"严重错误，窗口处理失败。\n", ERROR_TITLE, MB_OK);
+>>>>>>> bbe4cc73fce5a07e201eefb486ef95f93fda3760
 			abort();
 		}
 
@@ -82,6 +112,7 @@ namespace winrt::Luck::implementation
 
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     void MainPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
@@ -154,6 +185,17 @@ namespace winrt::Luck::implementation
 		using namespace Microsoft::UI::Xaml::Controls;
 		LuckSet::SelectedNumber = 1;
 
+=======
+	void MainPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
+	{
+		//myButton().Content(box_value(L"Clicked"));
+	}
+	void MainPage::Button_Click(IInspectable const& sender, RoutedEventArgs const& args)
+	{
+		using namespace Microsoft::UI::Xaml::Controls;
+		LuckSet::SelectedNumber = 1;
+
+>>>>>>> bbe4cc73fce5a07e201eefb486ef95f93fda3760
 
 		TextBlock name, dialogContent;
 		name.Text(L"结果");
@@ -166,11 +208,31 @@ namespace winrt::Luck::implementation
 
 		switch (LuckSet::JudgePrize())
 		{
+<<<<<<< HEAD
 		case 0: { dialogContent.Text(L"请选择你的幸运数字"); break; }
 		case 1: { dialogContent.Text(L"恭喜你抽到一等奖"); break; }
 		case 2: { dialogContent.Text(L"恭喜你抽到二等奖"); break; }
 		case 3: { dialogContent.Text(L"恭喜你抽到三等奖"); break; }
 		case -1: { dialogContent.Text(L"所有奖项均已抽�?); break; }
+=======
+		case 0: 
+			dialogContent.Text(L"请选择你的幸运数字");
+			break;
+		case 1: 
+			dialogContent.Text(L"恭喜你抽到一等奖"); 
+			break;
+		case 2: 
+			dialogContent.Text(L"恭喜你抽到二等奖"); 
+			break;
+		case 3:
+			dialogContent.Text(L"恭喜你抽到三等奖");
+			break;
+		case -1:
+			dialogContent.Text(L"所有奖项均已抽�?); 
+			break;
+		default:
+			break;
+>>>>>>> bbe4cc73fce5a07e201eefb486ef95f93fda3760
 		}
 		dialog.Content(dialogContent);
 		dialog.PrimaryButtonText(L"好的");
@@ -194,5 +256,8 @@ namespace winrt::Luck::implementation
 	{
 
 	}
+<<<<<<< HEAD
 >>>>>>> 87cb1181a081d927516251f306f51863901c09f4
+=======
+>>>>>>> bbe4cc73fce5a07e201eefb486ef95f93fda3760
 }
