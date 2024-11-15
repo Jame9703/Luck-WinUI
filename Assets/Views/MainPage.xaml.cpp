@@ -107,17 +107,10 @@ namespace winrt::Luck::implementation
     }
     void MainPage::RenewButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
     {
-
-        //Get access to IWindowNativewinrt::com_ptr<::IWindowNative>windowNative= warningWindow_create.as<IWindowNative>()
-        // Get the HWND for the XAML Window
-                //Get access to IWindowNative
-        auto window = Window::Current();
-        winrt::com_ptr<::IWindowNative> windowNative = window as<IWindowNative>();
-        HWND hWnd;
-        windowNative->get_WindowHandle(&hWnd);
-        WindowId id = GetwindowIdFromwindow(hWnd);
-        winrt::Microsoft::UI::Windowing::AppWindow appwind = winrt::Microsoft::UI::Windowing::AppWindow::GetFromWindowId(id);
-        appwind.SetPresenter(AppWindowPresenterKind::FullScreen);
+        using namespace Microsoft::UI::Windowing;
+        if (this_AppWindow.Presenter() == AppWindowPresenterKind::FullScreen)
+            this_AppWindow.SetPresenter(AppWindowPresenterKind::Default);
+        else this_AppWindow.SetPresenter(AppWindowPresenterKind::FullScreen);
     }
     void MainPage::SettingsButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
     {
