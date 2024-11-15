@@ -22,6 +22,33 @@ namespace winrt::Luck::implementation
         throw hresult_not_implemented();
     }
 
+    // 导航，获取窗口并储存在 this_AppWindow 中。
+    void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
+    {
+        using namespace winrt::Microsoft::UI::Xaml;
+
+        
+        try
+        {
+            Window w_window = e.Parameter().try_as<Window>();
+            if (w_window) __debugbreak();
+            this_AppWindow = w_window.AppWindow();
+        }
+        catch (winrt::hresult_error const& ex)
+        {
+            winrt::hresult hr = ex.code(); 
+            winrt::hstring message = ex.message(); 
+
+            __debugbreak();
+            MessageBox(NULL, L"严重错误，窗口处理失败。\n", L"Luck错误", MB_OK);
+            abort();
+        }
+
+        
+    }
+
+
+
     void MainPage::myButton_Click(IInspectable const&, RoutedEventArgs const&)
     {
         //myButton().Content(box_value(L"Clicked"));
