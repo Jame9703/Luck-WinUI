@@ -42,15 +42,6 @@ namespace winrt::Luck::implementation
 	{
 		window = make<MainWindow>();
 		window.ExtendsContentIntoTitleBar(true);//将内容延伸到标题栏区域
-		//// 获取窗口句柄
-		//DesktopWindowXamlSource desktopSource{ nullptr };
-		//desktopSource = DesktopWindowXamlSource::GetForCurrentView();
-		//HWND hwnd = reinterpret_cast<HWND>(desktopSource.GetWindowHandle());
-
-		//// 修改窗口样式以隐藏标题栏按钮
-		//LONG_PTR style = GetWindowLongPtr(hwnd, GWL_STYLE);
-		//style &= ~(WS_SYSMENU | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION);
-		//SetWindowLongPtr(hwnd, GWL_STYLE, style);
 		window.Activate();
 		Windows::Storage::ApplicationDataContainer localSettings = Windows::Storage::ApplicationData::Current().LocalSettings();
 		if (localSettings.Values().HasKey(L"FirstPrizeCount")

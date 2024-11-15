@@ -4,18 +4,19 @@
 #include "MainPage.g.cpp"
 #endif
 #include "Assets\Classes\RippleHelper\RippleHelper.h"
+#include "Assets\Views\SettingsPage.xaml.h"
 #include "Assets\Classes\Luck-Class\Luck.h"
 #include <winrt/Windows.UI.Popups.h>
 #include <microsoft.ui.xaml.window.h>
 #include <windows.h>
 #include <winrt/Windows.UI.Core.h>
+#include <winrt/Microsoft.UI.Xaml.Navigation.h>
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
 using namespace Windows::UI::Popups;
 using namespace winrt::Microsoft::UI;
 using namespace winrt::Microsoft::UI::Windowing;
-using namespace Windows::UI::Core;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -32,7 +33,7 @@ namespace winrt::Luck::implementation
         throw hresult_not_implemented();
     }
 
-    // å¯¼èˆªï¼Œè·å–çª—å£å¹¶å‚¨å­˜åœ¨ this_AppWindow ä¸­ã€‚
+    // µ¼º½£¬»ñÈ¡´°¿Ú²¢´¢´æÔÚ this_AppWindow ÖĞ¡£
     void MainPage::OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e)
     {
         using namespace winrt::Microsoft::UI::Xaml;
@@ -49,7 +50,7 @@ namespace winrt::Luck::implementation
             winrt::hstring message = ex.message(); 
 
             __debugbreak();
-            MessageBox(NULL, L"ä¸¥é‡é”™è¯¯ï¼Œçª—å£å¤„ç†å¤±è´¥ã€‚\n", L"Lucké”™è¯¯", MB_OK);
+            MessageBox(NULL, L"ÑÏÖØ´íÎó£¬´°¿Ú´¦ÀíÊ§°Ü¡£\n", L"Luck´íÎó", MB_OK);
             abort();
         }
 
@@ -65,36 +66,36 @@ namespace winrt::Luck::implementation
     void MainPage::Button_Click(IInspectable const& sender, RoutedEventArgs const& args)
     {
         LuckSet::SelectedNumber = 1;
-        MessageDialog dialog(L"æŠ½å¥–è¿›è¡Œä¸­...");
+        MessageDialog dialog(L"³é½±½øĞĞÖĞ...");
         switch (LuckSet::JudgePrize())
         {
         case 0:
         {
-            dialog.Content(L"è¯·é€‰æ‹©ä½ çš„å¹¸è¿æ•°å­—");
+            dialog.Content(L"ÇëÑ¡ÔñÄãµÄĞÒÔËÊı×Ö");
             dialog.ShowAsync();
         }
         break;
         case 1:
         {
-            dialog.Content(L"æ­å–œä½ æŠ½åˆ°ä¸€ç­‰å¥–");
+            dialog.Content(L"¹§Ï²Äã³éµ½Ò»µÈ½±");
             dialog.ShowAsync();
         }
         break;
         case 2:
         {
-            dialog.Content(L"æ­å–œä½ æŠ½åˆ°äºŒç­‰å¥–");
+            dialog.Content(L"¹§Ï²Äã³éµ½¶şµÈ½±");
             dialog.ShowAsync();
         }
         break;
         case 3:
         {
-            dialog.Content(L"æ­å–œä½ æŠ½åˆ°ä¸‰ç­‰å¥–");
+            dialog.Content(L"¹§Ï²Äã³éµ½ÈıµÈ½±");
             dialog.ShowAsync();
         }
         break;
         case -1:
         {
-            dialog.Content(L"æ‰€æœ‰å¥–é¡¹å‡å·²æŠ½å®Œ");
+            dialog.Content(L"ËùÓĞ½±Ïî¾ùÒÑ³éÍê");
             dialog.ShowAsync();
         }
         break;
@@ -116,6 +117,7 @@ namespace winrt::Luck::implementation
     }
     void MainPage::SettingsButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args)
     {
-
+        using namespace Microsoft::UI::Xaml::Navigation;
+        Frame.Navigate(winrt::xaml_typename<SettingsPage>());
     }
 }

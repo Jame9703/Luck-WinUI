@@ -10,6 +10,9 @@
     <Page Include="Assets\Views\MainWindow.xaml">
       <Filter>Assets\Views</Filter>
     </Page>
+    <Page Include="Assets\Views\SettingsPage.xaml">
+      <Filter>Assets\Views</Filter>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Midl Include="Assets\Views\MainPage.idl">
