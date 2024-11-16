@@ -14,10 +14,7 @@ namespace winrt::Luck::implementation
 
         int32_t MyProperty();
         void MyProperty(int32_t value);
-        void  OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e);
-
-
-        void myButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+        void OnNavigatedTo(winrt::Microsoft::UI::Xaml::Navigation::NavigationEventArgs e);
         void Button_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void ExitButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
         void RenewButton_Click(IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);

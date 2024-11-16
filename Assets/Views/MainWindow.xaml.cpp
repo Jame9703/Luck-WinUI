@@ -13,16 +13,6 @@ using namespace Microsoft::UI::Xaml;
 
 namespace winrt::Luck::implementation
 {
-    //MainWindow::MainWindow()
-    //{
-    //    auto appWindow = winrt::Windows::UI::WindowManagement::AppWindow::GetFromWindowId(winrt::Windows::UI::WindowManagement::AppWindow::GetWindowIdForCurrentWindow());
-    //    appWindow.TitleBar().ExtendsContentIntoTitleBar(false);
-
-    //    auto presenter = AppWindow().Presenter().as<Microsoft::UI::Windowing::OverlappedPresenter>();
-    //    presenter.IsMaximizable(false);
-    //    presenter.IsMinimizable(false);
-    //    presenter.SetBorderAndTitleBar(true, false);
-    //}
     int32_t MainWindow::MyProperty()
     {
         throw hresult_not_implemented();
@@ -32,10 +22,4 @@ namespace winrt::Luck::implementation
     {
         throw hresult_not_implemented();
     }
-
-    void MainWindow::myButton_Click(IInspectable const&, RoutedEventArgs const&)
-    {
-        myButton().Content(box_value(L"Clicked"));
-    }
-
 }

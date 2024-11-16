@@ -3,7 +3,6 @@
 #include "Assets/Views/MainWindow.xaml.h"
 #include "Assets\Classes\Luck-Class\Luck.h"
 #include <winrt/Windows.Storage.h>
-#include <windows.h>
 
 using namespace winrt;
 using namespace Microsoft::UI::Xaml;
@@ -40,9 +39,24 @@ namespace winrt::Luck::implementation
 	/// <param name="e">Details about the launch request and process.</param>
 	void App::OnLaunched([[maybe_unused]] LaunchActivatedEventArgs const& e)
 	{
+		using namespace Microsoft::UI::Windowing;
 		window = make<MainWindow>();
 		window.ExtendsContentIntoTitleBar(true);//将内容延伸到标题栏区域
 		window.Activate();
+		try//尝试全屏
+		{
+			this_AppWindow = window.AppWindow();
+			this_AppWindow.SetPresenter(AppWindowPresenterKind::FullScreen);
+		}
+		catch (winrt::hresult_error const& ex)
+		{
+			winrt::hresult hr = ex.code();
+			winrt::hstring message = ex.message();
+
+			__debugbreak();
+			MessageBox(NULL, L"Luck尝试全屏失败\n", ERROR_TITLE, MB_OK);
+			abort();
+		}
 		Windows::Storage::ApplicationDataContainer localSettings = Windows::Storage::ApplicationData::Current().LocalSettings();
 		if (localSettings.Values().HasKey(L"FirstPrizeCount")
 			&& localSettings.Values().HasKey(L"SecondPrizeCount")
