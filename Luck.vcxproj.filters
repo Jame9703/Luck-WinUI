@@ -4,85 +4,10 @@
     <ApplicationDefinition Include="App.xaml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="Assets\Views\MainPage.xaml">
-      <Filter>Assets\Views</Filter>
-    </Page>
-    <Page Include="Assets\Views\MainWindow.xaml">
-      <Filter>Assets\Views</Filter>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Midl Include="Assets\Views\MainPage.idl">
-      <Filter>Assets\Views</Filter>
-    </Midl>
-    <Midl Include="Assets\Views\MainWindow.idl">
-      <Filter>Assets\Views</Filter>
-    </Midl>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="Assets\Classes\RippleHelper\RippleHelper.cpp">
-      <Filter>Assets\Classes\RippleHelper</Filter>
-    </ClCompile>
-    <ClCompile Include="Assets\Classes\Luck-Class\Luck.cpp">
-      <Filter>Assets\Classes\Luck-Class</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Assets\Classes\RippleHelper\RippleHelper.h">
-      <Filter>Assets\Classes\RippleHelper</Filter>
-    </ClInclude>
-    <ClInclude Include="Assets\Classes\Luck-Class\Luck.h">
-      <Filter>Assets\Classes\Luck-Class</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\Wide310x150Logo.scale-200.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\StoreLogo.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\Square150x150Logo.scale-200.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\Square44x44Logo.scale-200.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\SplashScreen.scale-200.png">
-      <Filter>Assets</Filter>
-    </Image>
-    <Image Include="Assets\LockScreenLogo.scale-200.png">
-      <Filter>Assets</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Filter Include="Assets">
-      <UniqueIdentifier>{8f67d7f2-94c3-405c-a6fd-6972babdb078}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\Views">
-      <UniqueIdentifier>{6f93826d-ab2a-46b2-9498-a63d699e0031}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\Fonts">
-      <UniqueIdentifier>{8c2a3016-8250-4d52-bd88-d68f77026901}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\Classes">
-      <UniqueIdentifier>{8905a6ef-f97c-43e6-ba63-29193505f358}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\Classes\Luck-Class">
-      <UniqueIdentifier>{726ed554-a664-481d-8a22-e8c994955849}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\Classes\RippleHelper">
-      <UniqueIdentifier>{6500a419-3c0e-4e42-bd2e-5e8603432ddd}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <Manifest Include="app.manifest" />
@@ -91,15 +16,6 @@
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="README_coding.md" />
-  </ItemGroup>
-  <ItemGroup>
     <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="Assets\Fonts\HarmonyOS_Sans_SC_Medium.ttf">
-      <Filter>Assets\Fonts</Filter>
-    </Font>
   </ItemGroup>
 </Project>
